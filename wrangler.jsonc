@@ -5,6 +5,10 @@
   "name": "aksieman",
   "main": "src/worker.js",
   "compatibility_date": "2026-07-01",
+  "routes": [
+    { "pattern": "aksieman.com", "custom_domain": true },
+    { "pattern": "www.aksieman.com", "custom_domain": true }
+  ],
   "assets": {
     "directory": "./public",
     "binding": "ASSETS",
