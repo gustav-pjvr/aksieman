@@ -1,4 +1,4 @@
-// AKSIEMAN — scroll reveals, route-rail scrollspy, mobile nav
+// AKSIEMAN: scroll reveals, route-rail scrollspy, mobile nav
 (() => {
   'use strict';
 

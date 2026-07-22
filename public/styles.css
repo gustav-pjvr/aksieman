@@ -1,5 +1,5 @@
 /* ============================================================
-   AKSIEMAN — design tokens
+   AKSIEMAN design tokens
    Paper & charcoal, burnt orange accent, trail-route signature
    ============================================================ */
 :root {
@@ -480,7 +480,7 @@ h3 { font-weight: 750; font-size: 1.25rem; letter-spacing: 0; }
 }
 .manifesto ul { list-style: none; display: grid; gap: 0.55rem; }
 .manifesto li { font-size: 1.12rem; color: var(--ink-soft); }
-.manifesto li::before { content: "— "; color: var(--orange); }
+.manifesto li::before { content: "· "; color: var(--orange); }
 
 /* ============ gallery placeholders ============ */
 .gallery-grid {
