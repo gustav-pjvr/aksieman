@@ -403,6 +403,33 @@ h3 { font-weight: 750; font-size: 1.25rem; letter-spacing: 0; }
 .proj-body h3 { font-size: 1.45rem; margin-bottom: 0.3rem; }
 .proj-body p { color: var(--ink-soft); font-size: 1.02rem; max-width: 36rem; }
 
+.proj-visit {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-top: 0.85rem;
+  font-family: var(--font-display);
+  font-stretch: 105%;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.68rem;
+  font-weight: 600;
+  color: var(--forest);
+  text-decoration: none;
+  border: 1.5px solid var(--line);
+  border-radius: 999px;
+  padding: 0.5rem 1rem;
+  transition: background 0.2s, color 0.2s, border-color 0.2s, transform 0.2s var(--ease-out);
+}
+.proj-visit svg { transition: transform 0.2s var(--ease-out); }
+.proj-visit:hover {
+  background: var(--orange);
+  border-color: var(--orange);
+  color: var(--paper);
+  transform: translateY(-2px);
+}
+.proj-visit:hover svg { transform: translate(1px, -1px); }
+
 .proj-tag {
   color: var(--forest);
   border: 1px solid var(--line);
