@@ -82,4 +82,55 @@
   }
 
   setActive('hero');
+
+  // ---- gallery lightbox ----
+  const tiles = Array.from(document.querySelectorAll('.gallery-grid .ph'));
+  const box = document.getElementById('lightbox');
+  const boxImg = document.getElementById('lbImg');
+  const boxCap = document.getElementById('lbCap');
+
+  if (tiles.length && box && boxImg && boxCap) {
+    let current = 0;
+    let lastFocused = null;
+
+    const show = (i) => {
+      current = (i + tiles.length) % tiles.length;
+      const tile = tiles[current];
+      const img = tile.querySelector('img');
+      boxImg.src = img.src;
+      boxImg.alt = img.alt;
+      boxCap.textContent = tile.dataset.cap || '';
+    };
+
+    const open = (i) => {
+      lastFocused = document.activeElement;
+      show(i);
+      box.hidden = false;
+      document.body.style.overflow = 'hidden';
+      document.getElementById('lbClose').focus();
+    };
+
+    const close = () => {
+      box.hidden = true;
+      document.body.style.overflow = '';
+      if (lastFocused) lastFocused.focus();
+    };
+
+    tiles.forEach((tile, i) => tile.addEventListener('click', () => open(i)));
+    document.getElementById('lbClose').addEventListener('click', close);
+    document.getElementById('lbPrev').addEventListener('click', () => show(current - 1));
+    document.getElementById('lbNext').addEventListener('click', () => show(current + 1));
+
+    // Click the backdrop (not the photo or a control) to close.
+    box.addEventListener('click', (e) => {
+      if (e.target === box || e.target.classList.contains('lb-figure')) close();
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (box.hidden) return;
+      if (e.key === 'Escape') close();
+      else if (e.key === 'ArrowLeft') show(current - 1);
+      else if (e.key === 'ArrowRight') show(current + 1);
+    });
+  }
 })();

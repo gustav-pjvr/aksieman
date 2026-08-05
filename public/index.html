@@ -143,6 +143,15 @@
           <p>Embracing emerging technology early. Never stop learning, never stop improving.</p>
         </li>
       </ol>
+
+      <figure class="press reveal">
+        <img src="images/runners-world.webp" alt="A Runner&rsquo;s World South Africa feature headlined On Your Mark, about the route marking team behind Ultra-trail Cape Town" width="1280" height="960" loading="lazy" decoding="async">
+        <figcaption>
+          <span class="press-label">In print</span>
+          <p class="press-quote">&ldquo;We have a motto: we mark tight, and we mark right.&rdquo;</p>
+          <span class="press-source">Runner&rsquo;s World South Africa &middot; Issue 6 / 2025 &middot; words by Mike Finch</span>
+        </figcaption>
+      </figure>
     </section>
 
     <!-- ============ POSSIBILITIES ============ -->
@@ -233,7 +242,7 @@
     </section>
 
     <!-- ============ ADVENTURES ============ -->
-    <section class="section section-dark" id="adventures" aria-labelledby="adv-heading">
+    <section class="section section-dark section-photo" id="adventures" aria-labelledby="adv-heading">
       <div class="section-head reveal">
         <p class="cp-tag cp-tag-light"><i></i>CP 04 &middot; The Outdoors</p>
         <h2 id="adv-heading">Growth happens outside<br>the comfort zone.</h2>
@@ -281,15 +290,50 @@
       <div class="section-head reveal">
         <p class="cp-tag"><i></i>CP 06 &middot; The Proof</p>
         <h2 id="gal-heading">Real photography.<br>No stock images.</h2>
-        <p class="section-lede">Mountains, events, people, travel and behind-the-scenes: real moments are being gathered for this wall.</p>
+        <p class="section-lede">Mountains, start lines, finish lines, far-off villages and the work behind the scenes. Select any photo to see it larger.</p>
       </div>
+
       <div class="gallery-grid reveal">
-        <figure class="ph ph-a"><figcaption>Mountains</figcaption></figure>
-        <figure class="ph ph-b"><figcaption>Events</figcaption></figure>
-        <figure class="ph ph-c"><figcaption>People</figcaption></figure>
-        <figure class="ph ph-d"><figcaption>Travel</figcaption></figure>
-        <figure class="ph ph-e"><figcaption>Behind the scenes</figcaption></figure>
-        <figure class="ph ph-f"><figcaption>Action</figcaption></figure>
+        <button class="ph g-feature" type="button" data-cap="Finishing in the dark.">
+          <img src="images/night-finish.webp" alt="A trail runner raising a fist at a night finish line lit by a red flare" width="768" height="512" loading="lazy" decoding="async">
+          <span class="ph-cap">Finishing in the dark</span>
+        </button>
+        <button class="ph g-tall" type="button" data-cap="Sanlam Cape Town Marathon.">
+          <img src="images/cape-town-marathon.webp" alt="Jaco in running kit at the Sanlam Cape Town Marathon finish arch" width="750" height="1000" loading="lazy" decoding="async">
+          <span class="ph-cap">Sanlam Cape Town Marathon</span>
+        </button>
+        <button class="ph g-tall" type="button" data-cap="Comrades Marathon.">
+          <img src="images/comrades.webp" alt="Two runners in Century City Athletic Club jackets and Comrades caps giving thumbs up" width="952" height="1000" loading="lazy" decoding="async">
+          <span class="ph-cap">Comrades Marathon</span>
+        </button>
+        <button class="ph g-wide" type="button" data-cap="Race director, Ultra Trail Kohima.">
+          <img src="images/kohima-interview.webp" alt="Jaco Janse van Rensburg interviewed on television as race director of Ultra Trail Kohima" width="1100" height="507" loading="lazy" decoding="async">
+          <span class="ph-cap">Race director, Ultra Trail Kohima</span>
+        </button>
+        <button class="ph" type="button" data-cap="Marking the route, flag by flag.">
+          <img src="images/route-marking.webp" alt="Jaco kneeling beside a stack of route marker boards and flags in fynbos" width="1100" height="733" loading="lazy" decoding="async">
+          <span class="ph-cap">Marking the route</span>
+        </button>
+        <button class="ph" type="button" data-cap="Mountain villages, far from home.">
+          <img src="images/mountain-village.webp" alt="Four travellers standing together in a stone mountain village" width="1100" height="732" loading="lazy" decoding="async">
+          <span class="ph-cap">Far from home</span>
+        </button>
+        <button class="ph g-tall" type="button" data-cap="Camp kitchen, somewhere up high.">
+          <img src="images/camp-kitchen.webp" alt="Cooking steaks in a pan on a camp stove among rocks in the mountains" width="675" height="900" loading="lazy" decoding="async">
+          <span class="ph-cap">Camp kitchen</span>
+        </button>
+        <button class="ph g-tall" type="button" data-cap="Up on the mountain, together.">
+          <img src="images/on-the-mountain.webp" alt="Two hikers with packs standing arm in arm on a rocky summit" width="750" height="1000" loading="lazy" decoding="async">
+          <span class="ph-cap">Up on the mountain</span>
+        </button>
+        <button class="ph" type="button" data-cap="Loaded up and heading out.">
+          <img src="images/loaded-up.webp" alt="A motorbike packed with luggage on a dirt road below mountains" width="1100" height="619" loading="lazy" decoding="async">
+          <span class="ph-cap">Loaded up</span>
+        </button>
+        <button class="ph" type="button" data-cap="Hi-Tec Boland 90 Challenge.">
+          <img src="images/boland-90.webp" alt="A team holding trophies at the Hi-Tec Boland 90 Challenge prize giving" width="1100" height="825" loading="lazy" decoding="async">
+          <span class="ph-cap">Hi-Tec Boland 90</span>
+        </button>
       </div>
     </section>
 
@@ -311,6 +355,17 @@
     </section>
 
   </main>
+
+  <!-- ============ LIGHTBOX ============ -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Photo viewer" hidden>
+    <button class="lb-btn lb-close" id="lbClose" type="button" aria-label="Close photo viewer">&times;</button>
+    <button class="lb-btn lb-prev" id="lbPrev" type="button" aria-label="Previous photo">&#8249;</button>
+    <button class="lb-btn lb-next" id="lbNext" type="button" aria-label="Next photo">&#8250;</button>
+    <figure class="lb-figure">
+      <img id="lbImg" alt="">
+      <figcaption id="lbCap"></figcaption>
+    </figure>
+  </div>
 
   <!-- ============ FOOTER ============ -->
   <footer class="footer">
