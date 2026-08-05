@@ -1,9 +1,7 @@
 {
-  // AKSIEMAN static one-page site behind a preview-gate Worker.
+  // AKSIEMAN static one-page site, served straight from Cloudflare assets.
   // Deploy with: npx wrangler deploy
-  // Preview key: npx wrangler secret put PREVIEW_KEY
   "name": "aksieman",
-  "main": "src/worker.js",
   "compatibility_date": "2026-07-01",
   "routes": [
     { "pattern": "aksieman.com", "custom_domain": true },
@@ -11,9 +9,7 @@
   ],
   "assets": {
     "directory": "./public",
-    "binding": "ASSETS",
-    "not_found_handling": "single-page-application",
-    "run_worker_first": true
+    "not_found_handling": "single-page-application"
   },
   "observability": {
     "enabled": true

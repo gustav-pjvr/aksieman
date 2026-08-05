@@ -15,9 +15,7 @@ like a marked race route.
 - `public/styles.css`: design tokens and all styling
 - `public/script.js`: scroll reveals, route-rail scrollspy, mobile nav, gallery lightbox
 - `public/images/`: photography, resized and converted to WebP (originals are not kept in the repo)
-- `public/coming-soon.html`: what visitors see until launch
-- `src/worker.js`: the preview gate, described below
-- `wrangler.jsonc`: Cloudflare Worker config
+- `wrangler.jsonc`: Cloudflare deploy config
 
 ## Photos
 
@@ -45,18 +43,17 @@ npx wrangler dev
 npx wrangler deploy
 ```
 
-Deploys the `aksieman` Worker, serving aksieman.com, www.aksieman.com and
-aksieman.gustavpjvr.workers.dev.
+Deploys to Cloudflare, serving aksieman.com and www.aksieman.com. The
+workers.dev subdomain is not in use now that the custom domains are bound.
 
-## Preview gate
+If a change does not appear straight away, Cloudflare may still be serving a
+cached copy of `/`. It clears within a minute or two; a hard refresh
+(Ctrl+F5) confirms the new version is live.
 
-Visitors get `coming-soon.html`. To see the real site, open
-`/unlock?key=<PREVIEW_KEY>` once per device: it sets a year-long cookie.
-`/lock` clears it. The key lives in a Cloudflare secret (`PREVIEW_KEY`), never
-in this repo. Remove the gate at launch by dropping `main` and
-`run_worker_first` from `wrangler.jsonc`.
+The site is public. Until launch it sat behind a cookie-based preview gate (a
+Worker plus a coming-soon page); that was removed on 5 August 2026 and lives on
+in git history if it is ever needed again.
 
 ## Still to do
 
-- Lift the preview gate when the site goes public
 - More photography as it comes in
